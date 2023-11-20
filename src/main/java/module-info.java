@@ -7,6 +7,9 @@ module project.devkevin.projectjavafx {
     opens Test.contador;
     exports Test.contador;
 
+    opens Test.Wizard;
+    exports Test.Wizard;
+
     opens Test to javafx.fxml;
     exports Test;
 }
