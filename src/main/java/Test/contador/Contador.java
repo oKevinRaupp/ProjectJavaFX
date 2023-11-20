@@ -24,19 +24,22 @@ public class Contador extends Application {
         Button botaoMais = new Button("+");
         botaoMais.setOnAction(e -> {
             contador++;
-            labelNumero.setText(Integer.toString(contador));
+            atualizarLabelNumero(labelNumero);
         });
+        botaoMais.getStyleClass().add("botoes");
+
         Button botaoMenos = new Button("-");
         botaoMenos.setOnAction(e -> {
             contador--;
-            labelNumero.setText(Integer.toString(contador));
+            atualizarLabelNumero(labelNumero);
         });
+        botaoMenos.getStyleClass().add("botoes");
 
         HBox boxBotoes = new HBox();
         boxBotoes.setAlignment(Pos.CENTER);
         boxBotoes.setSpacing(10);
-        boxBotoes.getChildren().add(botaoMais);
         boxBotoes.getChildren().add(botaoMenos);
+        boxBotoes.getChildren().add(botaoMais);
 
         VBox boxConteudo = new VBox();
         boxConteudo.setAlignment(Pos.CENTER);
@@ -55,6 +58,20 @@ public class Contador extends Application {
 
         stage.setScene(cenaPrincipal);
         stage.show();
+    }
+    
+    private void atualizarLabelNumero(Label label) {
+    	label.setText(Integer.toString(contador));
+    	
+    	label.getStyleClass().remove("verde");
+    	label.getStyleClass().remove("vermelho");
+    	
+    	if(contador > 0 ) {
+    		label.getStyleClass().add("verde");
+    	} else if(contador < 0){
+    		label.getStyleClass().add("vermelho");
+    	}
+    	
     }
 
     public static void main(String[] args) {
