@@ -1,0 +1,15 @@
+.conteudo{
+    -fx-background-color: black;
+    font-family: "Poppins";
+}
+
+.titulo{
+	-fx-text-fill: #48b2ee;
+	-fx-font-size: 28px;
+	font-family: "Poppins";
+}
+
+.numero{
+	-fx-text-fill: #eee;
+	-fx-font-size: 28px;
+}

@@ -17,7 +17,9 @@ public class Contador extends Application {
     public void start(Stage stage) throws Exception {
 
         Label labelTitulo = new Label("ContadorApp");
+        labelTitulo.getStyleClass().add("titulo");
         Label labelNumero = new Label(Integer.toString(contador));
+        labelNumero.getStyleClass().add("numero");
 
         Button botaoMais = new Button("+");
         botaoMais.setOnAction(e -> {
@@ -36,15 +38,20 @@ public class Contador extends Application {
         boxBotoes.getChildren().add(botaoMais);
         boxBotoes.getChildren().add(botaoMenos);
 
-        VBox vBoxPrincipal = new VBox();
-        vBoxPrincipal.setAlignment(Pos.CENTER);
-        vBoxPrincipal.setSpacing(10);
-        vBoxPrincipal.getChildren().add(labelTitulo);
-        vBoxPrincipal.getChildren().add(labelNumero);
-        vBoxPrincipal.getChildren().add(boxBotoes);
+        VBox boxConteudo = new VBox();
+        boxConteudo.setAlignment(Pos.CENTER);
+        boxConteudo.getStyleClass().add("conteudo");
+        boxConteudo.setSpacing(10);
+        boxConteudo.getChildren().add(labelTitulo);
+        boxConteudo.getChildren().add(labelNumero);
+        boxConteudo.getChildren().add(boxBotoes);
 
 
-        Scene cenaPrincipal = new Scene(vBoxPrincipal,400,400);
+        String css = getClass().getResource("/Test/contador/Contador.css").toExternalForm();
+
+        Scene cenaPrincipal = new Scene(boxConteudo,400,400);
+        cenaPrincipal.getStylesheets().add(css);
+        cenaPrincipal.getStylesheets().add("https://fonts.googleapis.com/css2?family=Poppins");
 
         stage.setScene(cenaPrincipal);
         stage.show();
