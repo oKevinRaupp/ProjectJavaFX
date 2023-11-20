@@ -1,4 +1,4 @@
-package Test.contador;
+package test.contador;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -50,7 +50,7 @@ public class Contador extends Application {
         boxConteudo.getChildren().add(boxBotoes);
 
 
-        String css = getClass().getResource("/Test/contador/Contador.css").toExternalForm();
+        String css = getClass().getResource("/test/contador/Contador.css").toExternalForm();
 
         Scene cenaPrincipal = new Scene(boxConteudo,400,400);
         cenaPrincipal.getStylesheets().add(css);

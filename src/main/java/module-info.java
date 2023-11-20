@@ -4,12 +4,15 @@ module project.devkevin.projectjavafx {
 
     requires org.controlsfx.controls;
 
-    opens Test.contador;
-    exports Test.contador;
+    opens test.contador;
+    exports test.contador;
 
-    opens Test.Wizard;
-    exports Test.Wizard;
+    opens test.wizard;
+    exports test.wizard;
 
-    opens Test to javafx.fxml;
-    exports Test;
+    opens test.layout;
+    exports test.layout;
+
+    opens test to javafx.fxml;
+    exports test;
 }

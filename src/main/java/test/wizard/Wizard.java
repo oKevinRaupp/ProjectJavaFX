@@ -1,4 +1,4 @@
-package Test.Wizard;
+package test.wizard;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -54,7 +54,7 @@ public class Wizard extends Application {
         hBox.setAlignment(Pos.CENTER);
         hBox.getChildren().add(cenaAnterior);
         hBox.getChildren().add(proximaCena);
-        hBox.setSpacing(5);
+        hBox.setSpacing(10);
 
         cena2 = new Scene(hBox,400,400);
     }
@@ -73,7 +73,7 @@ public class Wizard extends Application {
         hBox.setAlignment(Pos.CENTER);
         hBox.getChildren().add(cenaAnterior);
         hBox.getChildren().add(proximaCena);
-        hBox.setSpacing(5);
+        hBox.setSpacing(10);
 
         cena3 = new Scene(hBox,400,400);
     }
