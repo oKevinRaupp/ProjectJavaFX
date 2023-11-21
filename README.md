@@ -1,3 +1,3 @@
 # ProjectJavaFX
 
-Estudando JavaFX
+Repositório com alguns projetos para estudar JavaFX.
