@@ -15,4 +15,8 @@ module project.devkevin.projectjavafx {
 
     opens test to javafx.fxml;
     exports test;
+
+    opens test.fxml;
+    exports test.fxml;
+
 }
